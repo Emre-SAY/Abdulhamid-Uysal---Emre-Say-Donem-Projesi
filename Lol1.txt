@@ -1,0 +1,60 @@
+Soru 1: Udyr'in hocasi kimdir?
+1)Master Yi
+2)Lee sin
+3)Kegan
+4)Irelia
+
+Soru 2:Rakan'in en sevdigi yiyecek?
+1)Armut
+2)Cikolata
+3)Seftali
+4)Elma
+
+Soru 3: Shen'in lakabi nedir?
+1)Denge koruyucu
+2)Sihir ustadi
+3)Alacakaranligin gozu
+4)Diyarin muhafizi
+
+Soru 4:Wukong'un hocasi kimdir?
+1)Ryze
+2)Karma
+3)Kennen
+4)Master yi
+
+Soru 5:Jhin'in silahinin adi nedir?
+1)Suflor
+2)Vurtuoz
+3)Severum
+4)Gravitum
+
+Soru 6:Rhaast ne demekdir?
+1)Savas
+2)Kan
+3)Olum
+4)Itaat
+
+Soru 7: Ivern'un goleminin adi nedir?
+1)Daisy
+2)Torl
+3)Sandy
+4)Batie
+
+Soru 8:Yone'nin ustasi ustat souma'yi kim oldurmustur?
+1)Yasuo
+2)Darius
+3)Riven
+4)Swain
+
+Soru 9:Ryze ilk ve tek olarak yolculuk yaparken kimi yanina almis ve ayni zamanda egitmistir?
+1)Nunu
+2)Lux
+3)Taliyah
+4)Brand
+
+Soru 10:Kayn nerelidir?
+1)Demacia
+2)Ionia
+3)Shurima
+4)Noxus
+
