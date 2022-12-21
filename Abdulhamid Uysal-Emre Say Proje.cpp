@@ -187,7 +187,7 @@ int main(){
             printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Noxus!\n");
         }
-       printf("%d",puan);
+       printf("****************\n**Puaniniz: %d**\n****************",puan);
        puan=0;
          break;
          //Demacia sorularý burda baþlýyor
@@ -292,7 +292,7 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Valor\n++++++++++\n\n");
 	}
-	printf("Puaniniz: %d",puan);
+	printf("****************\n**Puaniniz: %d**\n****************",puan);
 	puan=0;
         break;
         case 3://Rasgele sorular burda baþlayor
@@ -590,7 +590,7 @@ int main(){
         printf("Random number is out of range\n");
     }
   }
-  printf("puanin:%d\n",puan);
+  printf("****************\n**Puaniniz: %d**\n****************",puan);
     //buraya kadar
         break;    
 }
@@ -893,7 +893,7 @@ for( i=3;i>0;){
 	}
 	}
 printf("--------------------\n");
-printf("puanin:%d",puan);
+printf("****************\n**Puaniniz: %d**\n****************",puan);
 }
 else if(secim==3){
 	printf("Cikis yapmak icin herhangi bir tusa basin.");
