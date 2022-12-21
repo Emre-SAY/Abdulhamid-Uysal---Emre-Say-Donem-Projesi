@@ -5,7 +5,7 @@
 int main(){
 	FILE *dosya;
     dosya = fopen("C:\\Users\\esay2\\Desktop\\E\\Lol1.txt", "r");
-	srand(time(NULL));//rand() %100;
+	srand(time(0));//rand() %100;
     int puan=0;
     int cevap=0;
     int secim=0;
@@ -13,15 +13,6 @@ int main(){
      int i;
      int sayac = 0;
      char satir[100];
-     char satir1[100];
-     char satir2[100];
-     char satir3[100];
-     char satir4[100];
-     char satir5[100];
-    char satir6[100];
-    char satir7[100];
-    char satir8[100];
-    char satir9[100];
      /* bu kodda scanf'in olduğu if else yapıları bir fonksiyona dönüştürülebilirdi bu sayede daha az kod satırı olmuş olurdu ama yetismeyecegi
   için yapmadık ama aklımda*/
   srand(time(0));
@@ -54,8 +45,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-          while (fgets(satir1, 100, dosya) != NULL && sayac<10) {
-        printf("%s", satir1);
+          while (fgets(satir, 100, dosya) != NULL && sayac<10) {
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -70,8 +61,8 @@ int main(){
 		printf("\n");
         printf("********************************\n");
         printf("\n");
-         while (fgets(satir2, 100, dosya) != NULL && sayac<15) {//
-        printf("%s", satir2);
+         while (fgets(satir, 100, dosya) != NULL && sayac<15) {//
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -86,8 +77,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-        while (fgets(satir3, 100, dosya) != NULL && sayac<20) {//
-        printf("%s", satir3);
+        while (fgets(satir, 100, dosya) != NULL && sayac<20) {//
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -102,8 +93,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-        while (fgets(satir4, 100, dosya) != NULL && sayac<25) {//
-        printf("%s", satir4);
+        while (fgets(satir, 100, dosya) != NULL && sayac<25) {//
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -118,8 +109,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-       while (fgets(satir5, 100, dosya) != NULL && sayac<30) {//
-        printf("%s", satir5);
+       while (fgets(satir, 100, dosya) != NULL && sayac<30) {//
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -134,8 +125,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-        while (fgets(satir6, 100, dosya) != NULL && sayac<35) {//
-        printf("%s", satir6);
+        while (fgets(satir, 100, dosya) != NULL && sayac<35) {//
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -150,8 +141,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-        while (fgets(satir7, 100, dosya) != NULL && sayac<40) {//
-        printf("%s", satir7);
+        while (fgets(satir, 100, dosya) != NULL && sayac<40) {//
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -166,8 +157,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-        while (fgets(satir8, 100, dosya) != NULL && sayac<45) {//
-        printf("%s", satir8);
+        while (fgets(satir, 100, dosya) != NULL && sayac<45) {//
+        printf("%s", satir);
         sayac++;
     }
         scanf("%d",&cevap);
@@ -182,8 +173,8 @@ int main(){
         printf("\n");
         printf("********************************\n");
         printf("\n");
-        while (fgets(satir9, 100, dosya) != NULL && sayac<50) {//
-        printf("%s", satir9);
+        while (fgets(satir, 100, dosya) != NULL && sayac<50) {//
+        printf("%s", satir);
         sayac++;
     }
     fclose(dosya);
