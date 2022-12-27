@@ -2,17 +2,28 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-int main(){
-	FILE *dosya;
+#include <unistd.h>
+int dogruluk_kontrolu();
+
+int main(){	
+printf("        -----------------------\n");
+printf("        ---###-----------###---\n");
+printf("        ---###----###----###---\n");
+printf("        ---###---#---#---###---\n");
+printf("        ---#####--###----#####-\n");
+printf("        -----------------------\n");
+	FILE *dosya,*dosya2;
     dosya = fopen("C:\\Users\\esay2\\Desktop\\E\\Lol1.txt", "r");
+    dosya2= fopen("C:\\Users\\esay2\\Desktop\\E\\Lol2.txt", "r");
 	srand(time(0));//rand() %100;
     int puan=0;
     int cevap=0;
     int secim=0;
-     int bolge;
-     int i;
-     int sayac = 0;
-     char satir[100];
+    int bolge;
+    int i;
+    int sayac = 0;
+    char satir[100];
+    int sayi=0;
      /* bu kodda scanf'in olduğu if else yapıları bir fonksiyona dönüştürülebilirdi bu sayede daha az kod satırı olmuş olurdu ama yetismeyecegi
   için yapmadık ama aklımda*/
   srand(time(0));
@@ -21,19 +32,24 @@ int main(){
      printf("Bilgilendirme:Lutfen sorulari 1-4 arasi bir rakam girerek cevaplayiniz ve Turkce karakter kullanmayiniz.\n"); 
     printf("Hangi oyuna girmek istersiniz?\n");
     printf("1)Hikaye sorulari\n2)Replik bilmece\n3)Cikis\n");
-	scanf("%d",&secim);
+    sayi = dogruluk_kontrolu();
+    secim=sayi;
+	 sleep(1.5);system("cls");
 	if(secim==1){
 	printf("1)Hangi bolgeden soru istiyorsunuz?\n");
 	printf("Not:Bolge Sorularinda karakterler Map of Runeterra haritasinda hangi bolgede gozukuyorsa orasi baz alinmistir\n");
-	printf("1)Ionia\n2)Demacia\n3)Rasgele\n");
-	scanf("%d",&bolge);
+	printf("1)Ionia\n2)Demacia\n3)Rasgele\n4)Cikis\n");
+	sayi = dogruluk_kontrolu();
+    bolge=sayi;
+	 sleep(1.5);system("cls");
     switch(bolge){
         case 1: 
          while (fgets(satir, 100, dosya) != NULL && sayac<5) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+    sayi = dogruluk_kontrolu();
+    cevap=sayi;
         if(cevap == 2 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -42,14 +58,13 @@ int main(){
             printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Lee sin!\n");  
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+       sleep(1.5);system("cls");
           while (fgets(satir, 100, dosya) != NULL && sayac<10) {
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+    sayi = dogruluk_kontrolu();
+    cevap=sayi;
          if(cevap == 2 ){
          	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -58,14 +73,13 @@ int main(){
         printf("Yanlis cevap verdiniz!\n");
         	printf("Dogru cevap: Cikolata!\n");
 		}
-		printf("\n");
-        printf("********************************\n");
-        printf("\n");
+		sleep(1.5);system("cls");
          while (fgets(satir, 100, dosya) != NULL && sayac<15) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+    sayi = dogruluk_kontrolu();
+    cevap=sayi;
         if(cevap == 3 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -74,14 +88,13 @@ int main(){
            printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Alacakranligin gozu!\n");
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+        sleep(1.5);system("cls");
         while (fgets(satir, 100, dosya) != NULL && sayac<20) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+    sayi = dogruluk_kontrolu();
+    cevap=sayi;
          if(cevap == 4 ){
          	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -90,14 +103,13 @@ int main(){
            printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Master yi!\n");
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+        sleep(1.5);system("cls");
         while (fgets(satir, 100, dosya) != NULL && sayac<25) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap == 1 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -106,14 +118,13 @@ int main(){
             printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Suflor!\n");
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+        sleep(1.5);system("cls");
        while (fgets(satir, 100, dosya) != NULL && sayac<30) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
          if(cevap == 4 ){
          	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -122,14 +133,13 @@ int main(){
            printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: itaat!\n");
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+        sleep(1.5);system("cls");
         while (fgets(satir, 100, dosya) != NULL && sayac<35) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap == 1 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -138,14 +148,13 @@ int main(){
             printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Daisy!");
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+        sleep(1.5);system("cls");
         while (fgets(satir, 100, dosya) != NULL && sayac<40) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
          if(cevap == 3 ){
          	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -154,14 +163,13 @@ int main(){
             printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Riven!\n");
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+        sleep(1.5);system("cls");
         while (fgets(satir, 100, dosya) != NULL && sayac<45) {//
         printf("%s", satir);
         sayac++;
     }
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap == 4 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -170,15 +178,14 @@ int main(){
            printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Brand!\n");
         }
-        printf("\n");
-        printf("********************************\n");
-        printf("\n");
+        sleep(1.5);system("cls");
         while (fgets(satir, 100, dosya) != NULL && sayac<50) {//
         printf("%s", satir);
         sayac++;
     }
     fclose(dosya);
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
          if(cevap == 4 ){
          	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -187,12 +194,18 @@ int main(){
             printf("Yanlis cevap verdiniz!\n");
             printf("Dogru cevap: Noxus!\n");
         }
+        sleep(1.5);system("cls");
        printf("****************\n**Puaniniz: %d**\n****************",puan);
        puan=0;
          break;
          //Demacia soruları burda başlıyor
-        case 2:printf("1.Soru:Demacia'nin ezeli dusmani kimdir?\n1) Freljord\n2) Noxus\n3) Zaun\n4) Shurima\n\n");
-	scanf("%d",&cevap);
+          sleep(1.5);system("cls");
+        case 2:while (fgets(satir, 100, dosya2) != NULL && sayac<5) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==2){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -201,8 +214,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Noxus\n++++++++++\n\n");
 	}
-	printf("2. Soru: Hangi sampiyon Demaciadan degildir?\n1) Morgana\n2) Kayle\n3) Sylas\n4) Katarina\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<10) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==4){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -211,8 +229,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Katarina\n++++++++++\n\n");
 	}
-	printf("3. Soru: Garen'in kardesi kimdir?\n1) Darius\n2) Fiora\n3) Lux\n4) Riven\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<15) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==3){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -221,8 +244,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Lux\n++++++++++\n\n");
 	}
-	printf("4. Soru: Jarvan I 'i kim oldurmustur?\n1) Buyuculer\n2) Sion\n3) Draven\n4) Sylas\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<20) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==2){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -231,8 +259,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Sion\n++++++++++\n\n");
 	}
-	printf("5. Soru: Aralarindaki savas sonucu babalarinin olumune yol acan kardesler kimdir?\n1) Kayle-Morgana \n2) Yasuo-Yone\n3) Darius-Draven\n4) Jinx-Vi\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<25) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==1){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -241,8 +274,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Kayle-Morgana\n++++++++++\n\n");
 	}
-	printf("6. Soru: Poppy'nin kullandigi silah kime aittir?\n1)Sion\n2)Ornn\n3)Darkwill\n4)Orion\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<30) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==4){
 		printf("++++++++++\nDogru cevap:\n++++++++++\n\n");
 		puan+=10;
@@ -252,8 +290,13 @@ int main(){
 		printf("++++++++++\nDogru cevap: Orion\n++++++++++\n\n");
 		
 	}
-	printf("7. Soru: Orta koridor ve ormanda oynanan, silah olarak mızrak kullanan sampiyon kimdir?\n1) Akshan\n2) Fizz\n3) Jarvan IV\n4) Xin Zhao\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<35) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==4){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -262,8 +305,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Xin Zhao\n++++++++++\n\n");
 	}
-	printf("8: Soru: Fiora kimi oldurup laurent ailesinin basina gecmis?\n1) Babasi\n2) Ustasi\n3) Abisi\n4) Annesi\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<40) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==1){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -272,8 +320,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: Babasini\n++++++++++\n\n");
 	}
-	printf("9. Soru: Kayle'in kanatlari kacinci seviyede en yuksek formuna ulasir?\n1) 6\n2) 11\n3) 16\n4) 18\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<45) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==3){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -282,8 +335,13 @@ int main(){
 		printf("----------\nYanlis cevap\n----------\n");
 		printf("++++++++++\nDogru cevap: 16\n++++++++++\n\n");
 	}
-	printf("10. Soru: Quinn'in kartalinin ismi nedir?\n1) Willy\n2) Valor\n3) Shaly\n4) Niva\n\n");
-	scanf("%d",&cevap);
+	 sleep(1.5);system("cls");
+	while (fgets(satir, 100, dosya2) != NULL && sayac<50) {
+        printf("%s", satir);
+        sayac++;
+    }
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
 	if(cevap==2){
 		printf("++++++++++\nDogru cevap\n++++++++++\n\n");
 		puan+=10;
@@ -309,10 +367,11 @@ int main(){
     }
 // random_number değerine göre bir mesaj yazdırın
     switch (random_number) {
-      case 0:
+      case 0: sleep(1.5);system("cls");
         printf("Olumsuz hisari kim yapmistir?\n");
        printf("1)le blanc\n2)Mordekaiser\n3)Vladimir\n4)Swain\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         //int check_numeric_input(char* cevap); 
         if(cevap == 2 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
@@ -323,10 +382,11 @@ int main(){
         printf("++++++++++\nDogru cevap: Mordekaiser\n++++++++++\n\n");
         }
         break;
-      case 1:
+      case 1: sleep(1.5);system("cls");
         printf("Hangisi uc kiz kardesten biri degildir?\n");
        printf("1)Lissandra\n2)Serilda\n3)Avarosa\n4)Kalista\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         //int check_numeric_input(char* cevap);
         if(cevap == 4){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
@@ -337,10 +397,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Kalista\n++++++++++\n\n");
         }
         break;
-      case 2:
+      case 2: sleep(1.5);system("cls");
        printf("Katarina'nin kardesi kimdir?\n");
        printf("1)le blanc\n2)Talon\n3)Cassiopeia\n4)Samira\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap == 3){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -350,10 +411,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Cassiopeia\n++++++++++\n\n");
         }
         break;
-        case 3:
+        case 3: sleep(1.5);system("cls");
        printf("Rumble'in mekasinin ismi nedir?\n");
        printf("1)Tristy\n2)Lullu\n3)Ateseder\n4)Makineli\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap == 1 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -363,10 +425,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Tristy\n++++++++++\n\n");
         }
         break;
-      case 4:
+      case 4: sleep(1.5);system("cls");
         printf("Swain'in iblisinin adi nedir?\n");
        printf("1)Xear\n2)Raum\n3)Qsare\n4)Aslesh\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap == 2 ){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -376,10 +439,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Raum\n++++++++++\n\n");
         }
         break;
-      case 5:
+      case 5: sleep(1.5);system("cls");
         printf("Nilah'in iblisinin adi nedir?\n");
        printf("1)Ashlesh\n2)Serv\n3)Crats\n4)Trosy\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==1){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -389,10 +453,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Ashlesh\n++++++++++\n\n");
         }
         break;
-        case 6:
+        case 6: sleep(1.5);system("cls");
         	printf("Qiyananin silahinin adi nedir?\n");
        printf("1)Halka bicak\n2)Ohmlatl\n3)Elementer\n4)Yunhal\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==2){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -402,10 +467,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Ohmlath\n++++++++++\n\n");
         }
         break;
-        case 7:
+        case 7: sleep(1.5);system("cls");
         	printf("Trundle'a sopasini kim vermistir?\n");
        printf("1)Lissandra\n2)Sejuani\n3)Ornn\n4)Olaf\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap == 1){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -415,10 +481,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Lissandra\n++++++++++\n\n");
         }
         break;
-        case 8:
+        case 8: sleep(1.5);system("cls");
         	printf("Trundle'in sopasinin ismi nedir?\n");
        printf("1)TarumarEdici\n2)Troltor\n3)Kemik kiran\n4)Kemik donduran\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==4){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -428,10 +495,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Kemik Donduran\n++++++++++\n\n");
         }
         break;
-        case 9:
+        case 9: sleep(1.5);system("cls");
         	printf("Sion kacinci jarvani oldurmustur?\n");
        printf("1)JarvanI\n2)JarvanII\n3)JarvanIII\n4)JarvanIV\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==1){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -441,10 +509,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Jarvan I\n++++++++++\n\n");
         }
         break;
-        case 10:
+        case 10: sleep(1.5);system("cls");
         	printf("Pantheon'un gercek ismi nedir?\n");
        printf("1)Kegan Rodhe\n2)Milas\n3)Atreus\n4)Thorkel\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         //int check_numeric_input(char* cevap);//burdaaaa
         if(cevap ==3){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
@@ -455,10 +524,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Atreus\n++++++++++\n\n");
         }
         break;
-        case 11:
+        case 11: sleep(1.5);system("cls");
         	printf("Aphelios'un kardesinin ismi nedir?\n");
        printf("1)Alune\n2)Diana\n3)Leona\n4)Zoe\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap==1){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -468,10 +538,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Alune\n++++++++++\n\n");
         }
         break;
-        case 12:
+        case 12: sleep(1.5);system("cls");
         	printf("Jarvan4'u olumden kim kurtarmistir?\n");
        printf("1)Garen\n2)Xin zhao\n3)Fiora\n4)Shyvana\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==4){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -481,10 +552,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Shyvana\n++++++++++\n\n");
         }
         break;
-        case 13:
+        case 13: sleep(1.5);system("cls");
         	printf("Galio'yu kim yapmistir?\n");
        printf("1)Duran\n2)Mahel\n3)Darkwill\n4)Ryze\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==1){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -494,10 +566,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Duran\n++++++++++\n\n");
         }
         break;
-         case 14:
+         case 14: sleep(1.5);system("cls");
         	printf("Nilah nerelidir?\n");
        printf("1)Bilgewater\n2)Golge adalar\n3)Shurima\n4)Demacia\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==1){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -507,10 +580,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Bilgewater\n++++++++++\n\n");
         }
         break;
-         case 15:
+         case 15: sleep(1.5);system("cls");
         	printf("Sona nerelidir?\n");
        printf("1)Ionia\n2)Ixtal\n3)Freljord\n4)Demacia\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==4){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -520,10 +594,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Demacia\n++++++++++\n\n");
         }
         break;
-         case 16:
+         case 16: sleep(1.5);system("cls");
         	printf("Udyr nerelidir?\n");
        printf("1)Targon\n2)Freljord\n3)Ionia\n4)Shurima\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==2){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -533,10 +608,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Freljord\n++++++++++\n\n");
         }
         break;
-         case 17:
+         case 17: sleep(1.5);system("cls");
         	printf("Zac nerelidir?\n");
        printf("1)Piltover\n2)Zaun\n3)Bigewater\n4)Noxus\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==2){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -546,10 +622,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Zaun\n++++++++++\n\n");
         }
         break;
-         case 18:
+         case 18: sleep(1.5);system("cls");
         	printf("Ezreal nerelidir?\n");
        printf("1)Piltover\n2)Shurima\n3)Demacia\n4)Noxus\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==1){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -559,10 +636,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Piltover\n++++++++++\n\n");
         }
         break;
-         case 19:
+         case 19: sleep(1.5);system("cls");
         	printf("Lucian nerelidir?\n");
        printf("1)Bilgewater\n2)Golge adalar\n3)Demacia\n4)Ionia\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==3){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -572,10 +650,11 @@ int main(){
             printf("++++++++++\nDogru cevap: Demacia\n++++++++++\n\n");
         }
         break;
-         case 20:
+         case 20: sleep(1.5);system("cls");
         	printf("Darkin savasini bitiren zoe'nin asl adi nedir\n");
        printf("1)Lauren\n2)Seryl\n3)Elenor\n4)Maisha\n");
-        scanf("%d",&cevap);
+        sayi = dogruluk_kontrolu();
+        cevap=sayi;
         if(cevap ==4){
         	printf("++++++++++\nDogru cevap\n++++++++++\n\n");
             puan+=10;
@@ -590,15 +669,19 @@ int main(){
         printf("Random number is out of range\n");
     }
   }
+   sleep(1.5);system("cls");
   printf("****************\n**Puaniniz: %d**\n****************",puan);
     //buraya kadar
-        break;    
+        break;
+	case 4:
+	printf("Cikis yapmak icin herhangi bir tusa basin.");    
 }
 }
 //2.secimmmmmmmm
 else if(secim==2){
 	char cevapm[20];
  char b[20] ="katarina";
+  sleep(1.5);system("cls");
 printf("soru1:Neden,cunku yapabiliyorum!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -630,6 +713,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
  char cevapq[20];
  char c[20] ="pyke";
+  sleep(1.5);system("cls");
 printf("soru2:Cok calis,genc ol oylesi daha iyi!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -659,6 +743,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
  char cevapw[20];
  char a[20] ="jhin";
+ sleep(1.5);system("cls");
 printf("soru3:Bana deli diyorlar,sanatci dedigin deli olur!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -689,6 +774,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
 char cevape[20];
  char d[20] ="ivern";
+ sleep(1.5);system("cls");
 printf("soru4:En sevdigim renk bahar!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -719,6 +805,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
 char cevapr[20];
  char r[20] ="zed";
+ sleep(1.5);system("cls");
 printf("soru5:Iki kisinin bildigi sir degildir!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -749,6 +836,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
 char cevapt[20];
  char t[20] ="yasuo";
+ sleep(1.5);system("cls");
 printf("soru6:Onur dedigin isminde degil, yuregindedir!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -779,6 +867,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
 char cevapy[20];
  char y[20] ="qiyana";
+ sleep(1.5);system("cls");
 printf("soru7:Yetenek bir element olsaydi,birazini kafalarina atardim!\n****Kimin Repligidir****\n");
 for( i=3;i>0;){
 	i--;	
@@ -808,6 +897,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
 char cevapu[20];
  char u[20] ="ryze";
+ sleep(1.5);system("cls");
 printf("soru8:Hakiki silah ilimdir!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -837,6 +927,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
 char cevapo[20];
  char o[20] ="nasus";
+ sleep(1.5);system("cls");
 printf("soru9:Havlasam duyar misiniz sesimi misralarimda?\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -866,6 +957,7 @@ for( i=3;i>0;){
 printf("--------------------\n");
 char cevapp[20];
  char p[20] ="yasuo";
+ sleep(1.5);system("cls");
 printf("soru10:Adalet dedigin havali bir sozcuk sadece?\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
@@ -903,4 +995,19 @@ else{
 }
 
 return 0;
+}
+int dogruluk_kontrolu() {
+    int sayi;
+    while (1) {
+    int sonuc = scanf("%d", &sayi);
+    if (sonuc == 1) {
+        if (sayi >= 1 && sayi <= 4) {
+            break;
+        }
+    }
+    printf("Girilen sayi gecersiz. Lutfen tekrar deneyin.\n");
+    // Girilen verinin kalanını temizlemek için birkaç karakter oku
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
 }
