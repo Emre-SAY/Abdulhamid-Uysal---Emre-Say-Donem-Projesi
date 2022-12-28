@@ -679,14 +679,14 @@ printf("        -----------------------\n");
 }
 //2.secimmmmmmmm
 else if(secim==2){
-	char cevapm[20];
- char b[20] ="katarina";
+ char cevapgirilen[20];
+ char s1[20] ="katarina";
   sleep(1.5);system("cls");
 printf("soru1:Neden,cunku yapabiliyorum!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapm);//gets(cevapm);
-	 if( strcmp(cevapm,b)==0){
+	scanf("%s",&cevapgirilen);//gets(cevapm);
+	 if( strcmp(cevapgirilen,s1)==0){
 		printf("Dogru cevap\n");
 		printf("--------------------\n");
 		puan+=10;
@@ -703,7 +703,7 @@ for( i=3;i>0;){
 		printf("Ipucu:Orta koridor\n",i);
 	}
 
-	else if(i==0){
+	else {
 		printf("Yalis cevap bilemedin\n");
 		//printf("Kalan deneme hakkin:%d\n",i);
 		printf("Dogru cevap:Katarina\n");
@@ -711,14 +711,13 @@ for( i=3;i>0;){
 	}
 }
 printf("--------------------\n");
- char cevapq[20];
- char c[20] ="pyke";
+ char s2[20] ="pyke";
   sleep(1.5);system("cls");
 printf("soru2:Cok calis,genc ol oylesi daha iyi!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapq);
-	 if( strcmp(cevapq,c)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s2)==0){
 		printf("Dogru cevap\n");
 		puan+=10;
 		printf("--------------------\n");
@@ -734,21 +733,20 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Alt koridor\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:Pyke\n");
 		printf("--------------------\n");
 	}
 	}
 printf("--------------------\n");
- char cevapw[20];
- char a[20] ="jhin";
+ char s3[20] ="jhin";
  sleep(1.5);system("cls");
 printf("soru3:Bana deli diyorlar,sanatci dedigin deli olur!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapw);
-	 if( strcmp(cevapw,a)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s3)==0){
 		printf("Dogru cevap\n");
 			printf("--------------------\n");
 		puan+=10;
@@ -764,7 +762,7 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Alt koridor\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:Jhin\n");
 	}
@@ -772,14 +770,13 @@ for( i=3;i>0;){
 	}
 	printf("\n");
 printf("--------------------\n");
-char cevape[20];
- char d[20] ="ivern";
+ char s4[20] ="ivern";
  sleep(1.5);system("cls");
 printf("soru4:En sevdigim renk bahar!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevape);
-	 if( strcmp(cevape,d)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s4)==0){
 		printf("Dogru cevap\n");
 		printf("--------------------\n");
 		puan+=10;
@@ -795,7 +792,7 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Orman\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:ivern\n");
 		printf("--------------------\n");
@@ -803,14 +800,13 @@ for( i=3;i>0;){
 	}
 	printf("\n");
 printf("--------------------\n");
-char cevapr[20];
- char r[20] ="zed";
+ char s5[20] ="zed";
  sleep(1.5);system("cls");
 printf("soru5:Iki kisinin bildigi sir degildir!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapr);
-	 if( strcmp(cevapr,r)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s5)==0){
 		printf("Dogru cevap\n");
 		printf("What was that Faker\n");
 		printf("--------------------\n");
@@ -827,21 +823,20 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Orta koridor\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yanlis cevap bilemedin\n");
 		printf("Dogru cevap:Zed\n");
 		printf("--------------------\n");
 	}
 	}
 printf("--------------------\n");
-char cevapt[20];
- char t[20] ="yasuo";
+ char s6[20] ="yasuo";
  sleep(1.5);system("cls");
 printf("soru6:Onur dedigin isminde degil, yuregindedir!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapt);
-	 if( strcmp(cevapt,t)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s6)==0){
 		printf("Dogru cevap\n");
 		printf("--------------------\n");
 		printf("800k misin be\n");
@@ -858,21 +853,20 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Orta koridor\n");
 	}
-	else if(i==0){
+	else {
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:Yasuo\n");
 		printf("--------------------\n");
 	}
 	}
 printf("--------------------\n");
-char cevapy[20];
- char y[20] ="qiyana";
+ char s7[20] ="qiyana";
  sleep(1.5);system("cls");
 printf("soru7:Yetenek bir element olsaydi,birazini kafalarina atardim!\n****Kimin Repligidir****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapy);
-	 if( strcmp(cevapy,y)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s7)==0){
 		printf("Dogru cevap\n");
 		printf("--------------------\n");
 		puan+=10;
@@ -888,21 +882,20 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Orta koridor\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:Qiyana\n");
 		printf("--------------------\n");
 	}
 	}
 printf("--------------------\n");
-char cevapu[20];
- char u[20] ="ryze";
+ char s8[20] ="ryze";
  sleep(1.5);system("cls");
 printf("soru8:Hakiki silah ilimdir!\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapu);
-	 if( strcmp(cevapu,u)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s8)==0){
 		printf("Dogru cevap\n");
 		printf("--------------------\n");
 		puan+=10;
@@ -918,21 +911,20 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Orta koridor\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:Ryze\n");
 		printf("--------------------\n");
 	}
 	}
 printf("--------------------\n");
-char cevapo[20];
- char o[20] ="nasus";
+ char s9[20] ="nasus";
  sleep(1.5);system("cls");
 printf("soru9:Havlasam duyar misiniz sesimi misralarimda?\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapo);
-	 if( strcmp(cevapo,o)==0){
+	scanf("%s",&cevapgirilen);
+	 if( strcmp(cevapgirilen,s9)==0){
 		printf("Dogru cevap\n");
 		printf("--------------------\n");
 		puan+=10;
@@ -948,21 +940,20 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Shurima'li\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:Nasus\n");
 		printf("--------------------\n");
 	}
 	}
 printf("--------------------\n");
-char cevapp[20];
- char p[20] ="yasuo";
+ char s10[20] ="yasuo";
  sleep(1.5);system("cls");
 printf("soru10:Adalet dedigin havali bir sozcuk sadece?\n****Kimin repligidir?****\n");
 for( i=3;i>0;){
 	i--;	
-	scanf("%s",&cevapp);;
-	 if( strcmp(cevapp,p)==0){
+	scanf("%s",&cevapgirilen);;
+	 if( strcmp(cevapgirilen,s10)==0){
 		printf("Dogru cevap\n");
 		printf("--------------------\n");
 		puan+=10;
@@ -978,7 +969,7 @@ for( i=3;i>0;){
 		printf("Kalan deneme hakkin:%d\n",i);
 		printf("Ipucu:Bu sefer yok\n");
 	}
-	else if(i==0){
+	else{
 		printf("Yalis cevap bilemedin\n");
 		printf("Dogru cevap:Yasuo\n");
 		printf("--------------------\n");
